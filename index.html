@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="author" content="Christopher Kim and Kellen Maier">
+    <meta name="description" content="Application that is used to inform people of the effects of climate change on our world as a whole and the different regions individually.">
+    <title>Info 340 Project 1: Draft</title>
+    <link rel="icon" type="image/png" href="img/iconfinder_Global_Warming_6703994.png">
+</head>
+<body>
+    <header>
+        <h1>An Interactive View on the Worlds Climate Change</h1>
+    </header>
+    
+    <div>
+        <h2>The Goal</h2>
+        <p>
+            In our world today climate change is an extremely controversial topic. Some people believe that climate change is one of the biggest issues in
+            our world while others believe it is a myth. It is completely the decision of each individual of whether or not to see climate change as a threat,
+            but we hope that you will take the time to educate yourself. We have provided below an interactive map that displays data on climate change in an
+            easily understandable way.
+        </p>
+    </div>
+    <h2>Climate Change Map</h2>
+    <div>
+        <div>
+            <label>From:</label>
+            <input type="number" placeholder="YYYY" min="1800" max="2020">
+            <label>To:</label>
+            <input type="number" placeholder="YYYY" min="1800" max="2020">
+        </div>
+        <div>
+            <label>Country:</label>
+            <select>
+                <option value="World">World</option>
+                <option value="Brazil">Brazil</option>
+                <option value="China">China</option>
+                <option value="Germany">Germany</option>
+                <option value="United States">United States</option>
+            </select>
+        </div>
+        <div>
+            <button>Update Map</button>
+        </div>
+    </div>
+    <div aria-label="Map of world or country showing temp change over time">
+        <!--IMAGE FOR MAP GOES HERE-->
+        <img src="img/BEST_trend.png" alt="Map of change in temp globally over time">
+    </div>
+
+    <footer>
+        Map taken from <cite><a href="https://climatedataguide.ucar.edu/climate-data/global-surface-temperatures-best-berkeley-earth-surface-temperatures">NCAR: Climate Data Guide</a></cite>
+        <p>&#169 2021 Christopher and Kellen: Info 340 Project 1 Draft</p>
+    </footer>
+</body>
+</html>
