@@ -24,20 +24,22 @@
     <h2>Climate Change Map</h2>
     <div>
         <div>
-            <label>From:</label>
+            <label for="yearFrom">From:</label>
             <input type="number" placeholder="YYYY" min="1800" max="2020">
-            <label>To:</label>
+            <label for="yearTo">To:</label>
             <input type="number" placeholder="YYYY" min="1800" max="2020">
         </div>
         <div>
-            <label>Country:</label>
-            <select>
-                <option value="World">World</option>
-                <option value="Brazil">Brazil</option>
-                <option value="China">China</option>
-                <option value="Germany">Germany</option>
-                <option value="United States">United States</option>
-            </select>
+            <form>
+                <label for="country">Country:</label>
+                <select>
+                    <option value="World">World</option>
+                    <option value="Brazil">Brazil</option>
+                    <option value="China">China</option>
+                    <option value="Germany">Germany</option>
+                    <option value="United States">United States</option>
+                </select>
+            </form>
         </div>
         <div>
             <button>Update Map</button>
