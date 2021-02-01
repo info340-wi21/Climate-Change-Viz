@@ -11,12 +11,12 @@
 </head>
 <body>
     <header>
-        <h1>An Interactive View on the Worlds Climate Change</h1>
+        <h1 class="text-center">An Interactive View on the Worlds Climate Change</h1>
     </header>
     
     <div class="m-2 d-block">
-        <h2>The Goal</h2>
-        <p>
+        <h2 class="text-center">The Goal</h2>
+        <p class="text-justify">
             In our world today climate change is an extremely controversial topic. Some people believe that climate change is one of the biggest issues in
             our world while others believe it is a myth. It is completely the decision of each individual of whether or not to see climate change as a threat,
             but we hope that you will take the time to educate yourself. We have provided below an interactive map that displays data on climate change in an
@@ -24,15 +24,15 @@
         </p>
     </div>
     <div class="container">
-        <div class="d-flex row">
-            <h2 class="">Climate Change Map</h2>
-            <div class="col">
-                <label for="yearFrom">From:</label>
-                <input id="yearFrom" type="number" placeholder="YYYY" min="1800" max="2020">
-                <label for="yearTo">To:</label>
-                <input id="yearTo" type="number" placeholder="YYYY" min="1800" max="2020">
+        <div class="d-flex row justify-content-center">
+            <h2 class="text-center">Climate Change Map</h2>
+            <div class="d-flex col-12 col-md-4 m-2 text-center">
+                <label for="yearFrom" class="m-1">From:</label>
+                <input class="m-1" id="yearFrom" type="number" placeholder="YYYY" min="1800" max="2020">
+                <label class="m-1" for="yearTo">To:</label>
+                <input class="m-1" id="yearTo" type="number" placeholder="YYYY" min="1800" max="2020">
             </div>
-            <div class="col">
+            <div class="d-flex col-12 col-md-4 m-2">
                 <form>
                     <label for="country">Country:</label>
                     <select id="country">
@@ -44,18 +44,22 @@
                     </select>
                 </form>
             </div>
-            <div class="col">
-                <button>Update Map</button>
+            <div class="d-flex col-12 col-md-auto m-2">
+                <button><a href="landing.html" class="btn">Update Map</a></button>
             </div>
             <div aria-label="Map of world or country showing temp change over time">
                 <img class="img-fluid" src="img/BEST_trend.png" alt="Map of change in temp globally over time">
             </div>
         </div>
     </div>
-    <div class="d-flex">
-        <h2>Other Sources on Climate Change</h2>
-        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EtW2rrLHs08" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <a href="https://climate.nasa.gov/"><img class="img-fluid" src="img/HdVRngaW.jpg" alt="NASA logo"></a>
+    <div class="d-flex row">
+        <h2 class="text-center">Other Sources on Climate Change</h2>
+        <div class="d-flex col-12 justify-content-center col-md-6 justify-content-md-around">
+            <iframe class="embed-responsive-item m-2" src="https://www.youtube.com/embed/EtW2rrLHs08" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+        <div class="d-flex col-12 justify-content-center col-md-6 justify-content-md-around">
+            <a href="https://climate.nasa.gov/"><img class="img-fluid m-2" src="img/HdVRngaW.jpg" alt="NASA logo"></a>
+        </div>
     </div>
 
     <footer>
