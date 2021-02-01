@@ -16,3 +16,6 @@ h2, h3 {
 a:hover {
     color: purple;
 }
+.block {
+    display: block;
+}
