@@ -2,6 +2,12 @@ h1 {
     font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
     background-color: rgb(83, 56, 182);
     text-align: center;
+    color: #cfd6e3;
+}
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: #DE354C;
 }
 body {
     font-size: 16px;
@@ -16,6 +22,10 @@ h2, h3 {
 a:hover {
     color: purple;
 }
-.block {
-    display: block;
+footer {
+    background-color: rgb(67, 64, 68);
+    color: mintcream;
+}
+button {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
