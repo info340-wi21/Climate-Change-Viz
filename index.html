@@ -2,17 +2,19 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, shrink-to-fit=no, initial-scale=1">
     <meta name="author" content="Christopher Kim and Kellen Maier">
     <meta name="description" content="Application that is used to inform people of the effects of climate change on our world as a whole and the different regions individually.">
     <title>Info 340 Project 1: Draft</title>
     <link rel="icon" type="image/png" href="img/iconfinder_Global_Warming_6703994.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 </head>
 <body>
     <header>
         <h1>An Interactive View on the Worlds Climate Change</h1>
     </header>
     
-    <div>
+    <div class="m-2 d-block">
         <h2>The Goal</h2>
         <p>
             In our world today climate change is an extremely controversial topic. Some people believe that climate change is one of the biggest issues in
@@ -21,37 +23,39 @@
             easily understandable way.
         </p>
     </div>
-    <div>
-        <h2>Climate Change Map</h2>
-        <div>
-            <label for="yearFrom">From:</label>
-            <input type="number" placeholder="YYYY" min="1800" max="2020">
-            <label for="yearTo">To:</label>
-            <input type="number" placeholder="YYYY" min="1800" max="2020">
-        </div>
-        <div>
-            <form>
-                <label for="country">Country:</label>
-                <select>
-                    <option value="World">World</option>
-                    <option value="Brazil">Brazil</option>
-                    <option value="China">China</option>
-                    <option value="Germany">Germany</option>
-                    <option value="United States">United States</option>
-                </select>
-            </form>
-        </div>
-        <div>
-            <button>Update Map</button>
-        </div>
-        <div aria-label="Map of world or country showing temp change over time">
-            <img src="img/BEST_trend.png" alt="Map of change in temp globally over time">
+    <div class="container">
+        <div class="d-flex row">
+            <h2 class="">Climate Change Map</h2>
+            <div class="col">
+                <label for="yearFrom">From:</label>
+                <input id="yearFrom" type="number" placeholder="YYYY" min="1800" max="2020">
+                <label for="yearTo">To:</label>
+                <input id="yearTo" type="number" placeholder="YYYY" min="1800" max="2020">
+            </div>
+            <div class="col">
+                <form>
+                    <label for="country">Country:</label>
+                    <select id="country">
+                        <option value="World">World</option>
+                        <option value="Brazil">Brazil</option>
+                        <option value="China">China</option>
+                        <option value="Germany">Germany</option>
+                        <option value="United States">United States</option>
+                    </select>
+                </form>
+            </div>
+            <div class="col">
+                <button>Update Map</button>
+            </div>
+            <div aria-label="Map of world or country showing temp change over time">
+                <img class="img-fluid" src="img/BEST_trend.png" alt="Map of change in temp globally over time">
+            </div>
         </div>
     </div>
-    <div>
+    <div class="d-flex">
         <h2>Other Sources on Climate Change</h2>
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/EtW2rrLHs08" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        <a href="https://climate.nasa.gov/"><img src="img/HdVRngaW.jpg" alt="NASA logo"></a>
+        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EtW2rrLHs08" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <a href="https://climate.nasa.gov/"><img class="img-fluid" src="img/HdVRngaW.jpg" alt="NASA logo"></a>
     </div>
 
     <footer>
