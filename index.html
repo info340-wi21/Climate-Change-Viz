@@ -31,9 +31,9 @@
             <h2>Climate Change Map</h2>
             <div class="d-flex col-12 col-md-4 m-2 text-center">
                 <label for="yearFrom" class="m-1">From:</label>
-                <input class="m-1" id="yearFrom" type="number" placeholder="YYYY" min="1800" max="2020">
+                <input class="m-1" id="yearFrom" type="number" placeholder="YYYY" min="1800" max="2013">
                 <label class="m-1" for="yearTo">To:</label>
-                <input class="m-1" id="yearTo" type="number" placeholder="YYYY" min="1800" max="2020">
+                <input class="m-1" id="yearTo" type="number" placeholder="YYYY" min="1800" max="2013">
             </div>
             <div class="d-flex col-12 col-md-4 m-2">
                 <form>
@@ -71,6 +71,10 @@
     </footer>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.7.1/leaflet.js"></script>
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.2.8/es6-promise.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>
