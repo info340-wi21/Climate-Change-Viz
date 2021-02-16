@@ -1,13 +1,14 @@
 'use strict';
 
 
-let tempData = d3.csv("data/tempData.csv")
-    .then( function(response) {
-        let dataPromise = response.json();
-        return dataPromise;
-    })
-    .then(function(data) {
-        console.log(data);
+let renderMap = function renderMap(year1, year2, country) {
+    d3.csv("data/tempData.csv").then(function(data) {
+        printData(data);
     });
+}
 
-console.log(tempData);
+function printData(data) {
+    console.log(data);
+}
+
+renderMap();
