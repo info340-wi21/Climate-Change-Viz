@@ -8,6 +8,7 @@
     <title>Info 340 Project 1: Draft</title>
     <link rel="icon" type="image/png" href="img/iconfinder_Global_Warming_6703994.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A==" crossorigin=""/>
     <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
@@ -31,27 +32,23 @@
             <h2>Climate Change Map</h2>
             <div class="d-flex col-12 col-md-4 m-2 text-center">
                 <label for="yearFrom" class="m-1">From:</label>
-                <input class="m-1" id="yearFrom" type="number" placeholder="YYYY" min="1800" max="2013">
+                <input class="m-1" id="yearFrom" type="number" placeholder="YYYY" min="1900" max="2013">
                 <label class="m-1" for="yearTo">To:</label>
-                <input class="m-1" id="yearTo" type="number" placeholder="YYYY" min="1800" max="2013">
+                <input class="m-1" id="yearTo" type="number" placeholder="YYYY" min="1900" max="2013">
             </div>
             <div class="d-flex col-12 col-md-4 m-2">
                 <form>
                     <label for="country">Country:</label>
                     <select id="country">
                         <option value="World">World</option>
-                        <option value="Brazil">Brazil</option>
-                        <option value="China">China</option>
-                        <option value="Germany">Germany</option>
-                        <option value="United States">United States</option>
                     </select>
                 </form>
             </div>
             <div class="d-flex col-12 col-md-auto m-2">
-                <button><a href="landing.html" class="btn">Update Map</a></button>
+                <button>Update Map</button>
             </div>
             <div aria-label="Map of world or country showing temp change over time">
-                <img class="img-fluid" src="img/BEST_trend.png" alt="Map of change in temp globally over time">
+                <div id="mapid"></div>
             </div>
         </div>
     </div>
@@ -74,7 +71,6 @@
     <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
     <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/fetch/2.0.4/fetch.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/es6-promise/4.2.8/es6-promise.min.js"></script>
     <script src="js/index.js"></script>
 </body>
 </html>

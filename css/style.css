@@ -41,6 +41,9 @@ button {
 * {
     box-sizing: border-box;
 }
+#mapid {
+    height: 500px;
+}
 select:hover {
     color: rgb(97, 97, 209);
 }
