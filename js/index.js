@@ -16,7 +16,7 @@ L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/voyager/{z}/{x}/{y}.p
     attribution: '&copy; <a href="https://carto.com/">carto.com</a> contributors'
 }).addTo(map);
 
-let addCountries = function addCountries() {
+let addCountries = function addCountries() { //adds countries to 'Country' dropdown menu and fills the 'countries' array
     let selectCountryElem = document.querySelector("#country");
     for(let i = 0; i < countryLocations.length; i++) {
         let optionElem = document.createElement("option");
@@ -27,8 +27,7 @@ let addCountries = function addCountries() {
     }
 }
 
-let getDiff = function getDiff(data, yearFrom, yearTo, country) {
-    //GET TEMP DIFF BETWEEN YEARS
+let getDiff = function getDiff(data, yearFrom, yearTo, country) {//Get the temp diff between years
     let tempYearFrom = 0;
     let tempYearTo = 0;
     for(let i = 0; i < data.length; i++) {
@@ -42,7 +41,7 @@ let getDiff = function getDiff(data, yearFrom, yearTo, country) {
     return diff.toFixed(2)
 }
 
-let updateMap = function updateMap(data, yearFrom, yearTo, country) {
+let updateMap = function updateMap(data, yearFrom, yearTo, country) { //Updates the map by clearing all markers and re-adding them
     markerGroup.clearLayers()
     let marker;
     for(let i = 0; i < countries.length; i++) {
@@ -56,11 +55,11 @@ let updateMap = function updateMap(data, yearFrom, yearTo, country) {
         }
     }
     if(country !== 'World') {
-        marker.openPopup();
+        marker.openPopup(); // automatically opens the popup for the user selected country
     }
 }
 
-function getLocation(country) {
+function getLocation(country) { // Returns an array [latitude, longitude] to place markers correctly
     let location = [];
     for(let data of countryLocations) {
         if(data.name === country) {
@@ -71,7 +70,7 @@ function getLocation(country) {
     }
 }
 
-let renderMap = function renderMap() {
+let renderMap = function renderMap() { // called initially to render the map
     d3.csv("data/tempData.csv").then(function(data) {
         addCountries();
 
@@ -81,13 +80,15 @@ let renderMap = function renderMap() {
         let updateBtn = document.querySelector("button");
         updateMap(data, 1900, 2013, country.value);
 
-        updateBtn.addEventListener("click", function() {
+        updateBtn.addEventListener("click", function() { // action listener on 'Update Map' button to rerender the map when user wants to
+            // keeps user from inputting invalid years
             if(yearFrom.value === '' || yearFrom.value < 1900 || yearFrom.value > 2012 || yearFrom.value >= yearTo.value) {
                 yearFrom.value = 1900;
             }
             if(yearTo.value === '' || yearTo.value > 2013 || yearTo.value < 1901) {
                 yearTo.value = 2013;
             }
+            // calls to updateMap() passing in all the user entered data or generic values if no user entered data
             updateMap(data, yearFrom.value, yearTo.value, country.value);
         })
     });
