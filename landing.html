@@ -15,58 +15,52 @@
     
     <main>
         <div class="container">
-            <button><a href="index.html" class="btn">Main Page</a></button>
-            <h2 class="text-center">Climate Change in the United States from 1990 to 2017</h2>
-
-            <div class="row">
-                <div class="col-sm-6 col-md-3">
-                    <div class="graphs">
-                        <h3>Graph of US Emissions</h3>
-                        <div aria-label="Graph of US Emissions">
-                            <img src="img/US_gas_emissions_1990-2017.png" alt="Map of US gas emissions over time">
-                        </div>
+            <div class="d-flex col-12 col-md-auto m-2">
+                <button><a href="index.html" class="btn">View Map</a></button>
+            </div>
+            <div class="d-flex row justify-content-center">
+                <h2 class="text-center">Temperature Change Graph</h2>
+                <div class="d-flex col-12 col-md-4 m-2 text-center">
+                    <label for="yearFrom" class="m-1">From:</label>
+                    <input class="m-1" id="yearFrom" type="number" placeholder="YYYY" min="1900" max="2013">
+                    <label class="m-1" for="yearTo">To:</label>
+                    <input class="m-1" id="yearTo" type="number" placeholder="YYYY" min="1900" max="2013">
+                </div>
+                <div class="d-flex col-12 col-md-4 m-2">
+                    <form>
+                        <label for="country">Country:</label>
+                        <select id="country">
+                            <option value="United States">United States</option>
+                        </select>
+                    </form>
+                </div>
+                <div class="d-flex col-12 col-md-auto m-2">
+                    <button id="updGraph">Update Graph</button>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-6">
+                        <canvas id="chart" width="1000" height="800"></canvas>
                     </div>
                 </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="paragraph">
-                        <p class="text-justify">
-                            This chart shows data regarding CO2 emissions in the United States, currently the third most populated country.
-                            In the year 1990, the United States emitted 4,823,403.118 kt(kiloton) of C02. In 2017, the United States emitted
-                            approximately 5,140,000 kt.
-                        </p>
-                    </div>
+                <div class="paragraph">
+                    <p class="text-justify">
+                        This graph displays the difference between the chosen country's average temperature per year and the average global temperature
+                    </p>
                 </div>
-
-                <div class="col-sm-6 col-md-3">
-                    <div class="graphs">
-                        <h3>Graph of US Temperature Change</h3>
-                        <div aria-label="Graph of US Temperature Change">
-                            <img src="img/US_temperature_change_1990-2017.png" alt="Map of US temperatures over time">
-                        </div>
-                    </div>
-                </div>
-                <div class="col-sm-6 col-md-3">
-                    <div class="paragraph">
-                        <p class="text-justify">
-                            This chart shows data regarding temperatures in the United States, currently the third most populated country.
-                            In the year 1990, the United States had an average of 53.51 degrees Fahrenheit. In 2017, the United States
-                            had an average of 54.55 degrees Fahrenheit.
-                        </p>
-                    </div>
+                <div aria-label="Graph of country showing temp change over time">
+                    <div id="graphid"></div>
                 </div>
             </div>
         </div>
     </main>
 
     <footer>
-        <div class="block">
-            Emissions graph taken from <cite><a href="https://www.c2es.org/site/assets/uploads/2017/10/trend-in-us-ghg-emissions-2017-01.png">C2ES: U.S. Emissions</a></cite>
-        </div>
-        <div class="block">
-            Temperature graph taken from <cite><a href="https://www.statista.com/statistics/500472/annual-average-temperature-in-the-us/">Statista: Average annual temperature in the U.S. from 1895 to 2019</a></cite>
-        </div>
-        
-        <p>&#169 2021 Christopher and Kellen: Info 340 Project 1 Draft</p>
+        <p>&#169 2021 Christopher and Kellen: Info 340 Project 1</p>
     </footer>
+
+    <script src="https://d3js.org/d3-dsv.v1.min.js"></script>
+    <script src="https://d3js.org/d3-fetch.v1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.min.js"></script>
+    <script src="js/landing.js"></script>
 </body>
 </html>

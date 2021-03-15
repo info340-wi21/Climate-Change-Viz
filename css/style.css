@@ -44,24 +44,27 @@ button {
 #mapid {
     height: 500px;
 }
+#graphid {
+    height: 300px;
+}
 select:hover {
     color: rgb(97, 97, 209);
 }
 @media (min-width: 598px) {
     body {
-        background-color: rgb(155, 155, 155);
+        background-color: rgb(255,218,185)
     }
 }
 
 @media(min-width: 768px) {
     body {
-        background-color: rgb(192, 191, 191);
+        background-color: rgb(255,228,181)
     }
 }
 
 @media (min-width: 992px) {
     body {
-        background-color: lightgrey;
+        background-color: rgb(255,239,213)
     }
 }
 

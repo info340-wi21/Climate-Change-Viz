@@ -77,7 +77,7 @@ let renderMap = function renderMap() { // called initially to render the map
         let yearFrom = document.querySelector("#yearFrom");
         let yearTo = document.querySelector("#yearTo");
         let country = document.querySelector("#country");
-        let updateBtn = document.querySelector("button");
+        let updateBtn = document.querySelector("#updMap");
         updateMap(data, 1900, 2013, country.value);
 
         updateBtn.addEventListener("click", function() { // action listener on 'Update Map' button to rerender the map when user wants to
