@@ -35,5 +35,8 @@
         "error"
       ]
     }
+  },
+  "dependencies": {
+    "eslint-plugin-d3": "^1.5.0"
   }
 }

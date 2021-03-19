@@ -1,0 +1,75 @@
+h1 {
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    background-color: rgb(83, 56, 182);
+    text-align: center;
+    color: #cfd6e3;
+}
+h2 {
+    text-align: center;
+    text-decoration: underline;
+    color: #DE354C;
+}
+body {
+    font-size: 16px;
+    font-family: 'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+    background-color: rgb(128, 128, 128);
+}
+p {
+    line-height: 1.5;
+}
+h2, h3 {
+    font-weight: bold;
+}
+a:hover {
+    color: purple;
+}
+footer {
+    background-color: rgb(67, 64, 68);
+    color: mintcream;
+}
+button {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.graphs {
+    background-color: rgb(83, 56, 182);
+    color: white;
+    padding: 10px;
+}
+.paragraph {
+    background-color: rgb(221, 192, 30);
+}
+* {
+    box-sizing: border-box;
+}
+#mapid {
+    height: 500px;
+}
+#graphid {
+    height: 300px;
+}
+select:hover {
+    color: rgb(97, 97, 209);
+}
+@media (min-width: 598px) {
+    body {
+        background-color: rgb(255,218,185)
+    }
+}
+
+@media(min-width: 768px) {
+    body {
+        background-color: rgb(255,228,181)
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        background-color: rgb(255,239,213)
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        background-color: white;
+    }
+}
