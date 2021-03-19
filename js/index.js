@@ -1,5 +1,7 @@
 'use strict';
 
+/* global d3:writable, L:writable */
+
 let map = L.map('mapid').setView([0, 0], 2);
 let markerGroup = L.layerGroup().addTo(map);
 let countries = [];

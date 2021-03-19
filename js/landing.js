@@ -1,5 +1,7 @@
 'use strict';
 
+/* global d3:writable, Chart:writable */
+
 let countries = [];
 let countryLocations = [];
 d3.csv('/data/countriesLocation.csv').then(function(data) {
